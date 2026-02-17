@@ -1,0 +1,192 @@
+.editor-page {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+}
+
+.editor-loading {
+	padding: var(--space-xl);
+	color: var(--text-sub);
+}
+
+.editor-error {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	gap: var(--space-md);
+	text-align: center;
+}
+
+.editor-error-message {
+	color: var(--error-main);
+	font-size: var(--fs-sm);
+}
+
+.editor-error-actions {
+	display: flex;
+	gap: var(--space-sm);
+}
+
+.editor-toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: var(--space-md) var(--space-xl);
+	border-bottom: 1px solid var(--border-subtle);
+	flex-shrink: 0;
+}
+
+.editor-toolbar-left {
+	display: flex;
+	align-items: center;
+	gap: var(--space-sm);
+	overflow: hidden;
+}
+
+.editor-back-btn {
+	background: none;
+	border: none;
+	color: var(--text-sub);
+	font-size: var(--fs-h3);
+	line-height: 1;
+	padding: var(--space-xs);
+	border-radius: var(--radius-sm);
+	cursor: pointer;
+	transition:
+		background-color var(--transition-fast),
+		color var(--transition-fast);
+	flex-shrink: 0;
+}
+
+.editor-back-btn:hover {
+	background-color: var(--bg-card);
+	color: var(--text-heading);
+}
+
+.editor-filename {
+	font-size: var(--fs-sm);
+	font-weight: var(--fw-medium);
+	color: var(--text-heading);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	background: none;
+	border: 1px solid transparent;
+	border-radius: var(--radius-sm);
+	padding: var(--space-xs) var(--space-sm);
+	cursor: pointer;
+	transition:
+		border-color var(--transition-fast),
+		background-color var(--transition-fast);
+}
+
+.editor-filename:hover {
+	border-color: var(--border-subtle);
+	background-color: var(--bg-card);
+}
+
+.editor-rename {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	min-width: 0;
+}
+
+.editor-rename-input-row {
+	display: flex;
+	align-items: center;
+	gap: 0;
+}
+
+.editor-rename-input {
+	font-size: var(--fs-sm);
+	font-weight: var(--fw-medium);
+	color: var(--text-heading);
+	padding: var(--space-xs) var(--space-sm);
+	border: 1px solid var(--primary-main);
+	border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+	background: var(--bg-page);
+	outline: none;
+	min-width: 120px;
+}
+
+.editor-rename-ext {
+	font-size: var(--fs-sm);
+	color: var(--text-sub);
+	padding: var(--space-xs) var(--space-sm);
+	border: 1px solid var(--primary-main);
+	border-left: none;
+	border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+	background: var(--bg-section);
+	user-select: none;
+}
+
+.editor-rename-error {
+	font-size: var(--fs-xs);
+	color: var(--error-main);
+}
+
+.editor-toolbar-actions {
+	display: flex;
+	align-items: center;
+	gap: var(--space-md);
+}
+
+.editor-updated-at {
+	font-size: var(--fs-xs);
+	color: var(--text-sub);
+}
+
+.editor-unsaved {
+	font-size: var(--fs-xs);
+	color: var(--warning-text);
+}
+
+.editor-frontmatter {
+	padding: var(--space-md) var(--space-xl);
+	border-bottom: 1px solid var(--border-subtle);
+	background-color: var(--bg-section);
+	flex-shrink: 0;
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.editor-section-title {
+	font-size: var(--fs-xs);
+	font-weight: var(--fw-medium);
+	color: var(--text-sub);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: var(--space-md);
+}
+
+.editor-fm-fields {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: var(--space-md);
+}
+
+.editor-fm-field {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xs);
+}
+
+.editor-fm-label {
+	font-size: var(--fs-xs);
+	font-weight: var(--fw-medium);
+	color: var(--text-heading);
+}
+
+.editor-fm-required {
+	color: var(--error-main);
+	margin-left: 2px;
+}
+
+.editor-content {
+	flex: 1;
+	overflow: hidden;
+}

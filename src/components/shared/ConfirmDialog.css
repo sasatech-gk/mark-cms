@@ -1,0 +1,11 @@
+.confirm-dialog-message {
+	font-size: var(--fs-sm);
+	line-height: 1.8;
+	margin-bottom: var(--space-xl);
+}
+
+.confirm-dialog-actions {
+	display: flex;
+	gap: var(--space-sm);
+	justify-content: flex-end;
+}

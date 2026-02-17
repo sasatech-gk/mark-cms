@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap");
+@import "./variables.css";
+@import "./theme.css";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body,
+#root {
+	height: 100%;
+	font-family: var(--font-family);
+	font-size: var(--fs-body);
+	font-weight: var(--fw-regular);
+	line-height: var(--lh-body);
+	color: var(--text-body);
+	background-color: var(--bg-page);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	font-size: var(--fs-h1);
+	font-weight: var(--fw-bold);
+	line-height: var(--lh-heading);
+	color: var(--text-heading);
+}
+
+h2 {
+	font-size: var(--fs-h2);
+	font-weight: var(--fw-semibold);
+	line-height: var(--lh-heading);
+	color: var(--text-heading);
+}
+
+h3 {
+	font-size: var(--fs-h3);
+	font-weight: var(--fw-semibold);
+	line-height: var(--lh-heading);
+	color: var(--text-heading);
+}
+
+a {
+	color: var(--primary-main);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+button {
+	font-family: var(--font-family);
+	cursor: pointer;
+}
+
+input,
+textarea,
+select {
+	font-family: var(--font-family);
+	font-size: var(--fs-sm);
+	color: var(--text-body);
+	background-color: var(--bg-card);
+	border: 1px solid var(--border-default);
+	border-radius: var(--radius-sm);
+	padding: var(--space-sm) var(--space-md);
+	line-height: var(--lh-small);
+	transition:
+		border-color var(--transition-fast),
+		box-shadow var(--transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	outline: none;
+	border-color: var(--primary-main);
+	box-shadow: 0 0 0 2px var(--primary-tint3);
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: var(--text-sub);
+}
+
+select {
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238A9B93' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right var(--space-sm) center;
+	padding-right: var(--space-xl);
+	cursor: pointer;
+}
+
+[data-theme="dark"] select {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B8078' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+}
+
+select option {
+	background-color: var(--bg-card);
+	color: var(--text-body);
+}
+
+input[type="checkbox"] {
+	appearance: none;
+	width: 18px;
+	height: 18px;
+	padding: 0;
+	border: 1px solid var(--border-default);
+	border-radius: var(--radius-sm);
+	cursor: pointer;
+	position: relative;
+	flex-shrink: 0;
+}
+
+input[type="checkbox"]:checked {
+	background-color: var(--primary-main);
+	border-color: var(--primary-main);
+}
+
+input[type="checkbox"]:checked::after {
+	content: "";
+	position: absolute;
+	left: 5px;
+	top: 2px;
+	width: 5px;
+	height: 9px;
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+input[type="checkbox"]:focus {
+	box-shadow: 0 0 0 2px var(--primary-tint3);
+}
+
+/* Shared buttons */
+.btn-primary {
+	padding: var(--space-sm) var(--space-lg);
+	background-color: var(--primary-main);
+	color: #fff;
+	border: none;
+	border-radius: var(--radius-sm);
+	font-size: var(--fs-sm);
+	font-weight: var(--fw-medium);
+	cursor: pointer;
+	transition: background-color var(--transition-fast);
+}
+
+.btn-primary:hover {
+	background-color: var(--primary-tint1);
+}
+
+.btn-primary:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.btn-secondary {
+	padding: var(--space-sm) var(--space-lg);
+	background: none;
+	color: var(--text-body);
+	border: 1px solid var(--border-default);
+	border-radius: var(--radius-sm);
+	font-size: var(--fs-sm);
+	font-weight: var(--fw-medium);
+	cursor: pointer;
+	transition:
+		background-color var(--transition-fast),
+		border-color var(--transition-fast);
+}
+
+.btn-secondary:hover {
+	background-color: var(--bg-card);
+	border-color: var(--primary-tint2);
+}
+
+/* Danger button (shared) */
+.btn-danger {
+	padding: var(--space-sm) var(--space-lg);
+	background-color: var(--error-main);
+	color: #fff;
+	border: none;
+	border-radius: var(--radius-sm);
+	font-size: var(--fs-sm);
+	font-weight: var(--fw-medium);
+	cursor: pointer;
+	transition: opacity var(--transition-fast);
+}
+
+.btn-danger:hover {
+	opacity: 0.85;
+}
+
+/* Danger outline button (shared) */
+.btn-danger-outline {
+	padding: var(--space-sm) var(--space-md);
+	background: none;
+	border: 1px solid var(--border-default);
+	border-radius: var(--radius-sm);
+	color: var(--error-main);
+	font-size: var(--fs-xs);
+	cursor: pointer;
+	transition:
+		border-color var(--transition-fast),
+		background-color var(--transition-fast);
+}
+
+.btn-danger-outline:hover {
+	border-color: var(--error-main);
+	background-color: var(--error-bg);
+}
+
+/* Icon danger button (shared) */
+.btn-icon-danger {
+	background: none;
+	border: none;
+	color: var(--text-disabled);
+	font-size: var(--fs-h3);
+	line-height: 1;
+	padding: var(--space-xs);
+	transition: color var(--transition-fast);
+}
+
+.btn-icon-danger:hover {
+	color: var(--error-main);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--bg-section);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--border-default);
+	border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--text-sub);
+}

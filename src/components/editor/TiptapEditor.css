@@ -1,0 +1,250 @@
+.tiptap-wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* ── Toolbar ── */
+.tiptap-toolbar {
+	display: flex;
+	align-items: center;
+	gap: var(--space-xs);
+	padding: var(--space-sm) var(--space-md);
+	border-bottom: 1px solid var(--border-subtle);
+	background-color: var(--bg-section);
+	flex-shrink: 0;
+	flex-wrap: wrap;
+}
+
+.tiptap-toolbar-group {
+	display: flex;
+	gap: 2px;
+}
+
+.tiptap-toolbar-divider {
+	width: 1px;
+	height: 20px;
+	background-color: var(--border-subtle);
+	margin: 0 var(--space-xs);
+}
+
+.tiptap-toolbar-spacer {
+	flex: 1;
+}
+
+.tiptap-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 28px;
+	height: 28px;
+	padding: 0 var(--space-xs);
+	background: none;
+	border: 1px solid transparent;
+	border-radius: var(--radius-sm);
+	color: var(--text-body);
+	font-size: var(--fs-xs);
+	line-height: 1;
+	cursor: pointer;
+	transition:
+		background-color var(--transition-fast),
+		border-color var(--transition-fast),
+		color var(--transition-fast);
+}
+
+.tiptap-btn:hover {
+	background-color: var(--bg-card);
+	border-color: var(--border-default);
+}
+
+.tiptap-btn.active {
+	background-color: var(--primary-tint3);
+	border-color: var(--primary-main);
+	color: var(--primary-main);
+}
+
+.tiptap-btn:disabled {
+	color: var(--text-disabled);
+	cursor: not-allowed;
+}
+
+.tiptap-btn:disabled:hover {
+	background: none;
+	border-color: transparent;
+}
+
+/* ── Editor Content ── */
+.tiptap-content {
+	flex: 1;
+	overflow-y: auto;
+	padding: var(--space-lg) var(--space-xl);
+	background-color: var(--bg-card);
+}
+
+.tiptap-content .tiptap {
+	outline: none;
+	min-height: 100%;
+	font-size: var(--fs-body);
+	line-height: var(--lh-body);
+	color: var(--text-body);
+}
+
+/* Placeholder */
+.tiptap-content .tiptap p.is-editor-empty:first-child::before {
+	content: attr(data-placeholder);
+	float: left;
+	color: var(--text-disabled);
+	pointer-events: none;
+	height: 0;
+}
+
+/* ── Typography inside editor ── */
+.tiptap-content .tiptap h1 {
+	font-size: var(--fs-h1);
+	font-weight: var(--fw-bold);
+	color: var(--text-heading);
+	margin: var(--space-lg) 0 var(--space-md);
+	line-height: var(--lh-heading);
+}
+
+.tiptap-content .tiptap h2 {
+	font-size: var(--fs-h2);
+	font-weight: var(--fw-semibold);
+	color: var(--text-heading);
+	margin: var(--space-lg) 0 var(--space-sm);
+	line-height: var(--lh-heading);
+}
+
+.tiptap-content .tiptap h3 {
+	font-size: var(--fs-h3);
+	font-weight: var(--fw-semibold);
+	color: var(--text-heading);
+	margin: var(--space-md) 0 var(--space-sm);
+	line-height: var(--lh-heading);
+}
+
+.tiptap-content .tiptap p {
+	margin: 0 0 var(--space-sm);
+}
+
+.tiptap-content .tiptap ul,
+.tiptap-content .tiptap ol {
+	padding-left: var(--space-xl);
+	margin: 0 0 var(--space-sm);
+}
+
+.tiptap-content .tiptap li {
+	margin-bottom: var(--space-xs);
+}
+
+.tiptap-content .tiptap blockquote {
+	border-left: 3px solid var(--primary-main);
+	padding-left: var(--space-md);
+	margin: var(--space-sm) 0;
+	color: var(--text-sub);
+}
+
+.tiptap-content .tiptap code {
+	background-color: var(--bg-section);
+	border: 1px solid var(--border-subtle);
+	border-radius: var(--radius-sm);
+	padding: 1px var(--space-xs);
+	font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
+	font-size: 0.9em;
+}
+
+.tiptap-content .tiptap pre {
+	background-color: var(--bg-section);
+	border: 1px solid var(--border-subtle);
+	border-radius: var(--radius-md);
+	padding: var(--space-md);
+	margin: var(--space-sm) 0;
+	overflow-x: auto;
+}
+
+.tiptap-content .tiptap pre code {
+	background: none;
+	border: none;
+	padding: 0;
+	font-size: var(--fs-xs);
+}
+
+.tiptap-content .tiptap hr {
+	border: none;
+	border-top: 1px solid var(--border-default);
+	margin: var(--space-lg) 0;
+}
+
+.tiptap-content .tiptap a {
+	color: var(--primary-main);
+	text-decoration: underline;
+}
+
+.tiptap-content .tiptap img {
+	max-width: 100%;
+	height: auto;
+	border-radius: var(--radius-md);
+}
+
+/* Task list */
+.tiptap-content .tiptap ul[data-type="taskList"] {
+	list-style: none;
+	padding-left: var(--space-xs);
+}
+
+.tiptap-content .tiptap ul[data-type="taskList"] li {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--space-sm);
+}
+
+.tiptap-content .tiptap ul[data-type="taskList"] li label {
+	flex-shrink: 0;
+	margin-top: 2px;
+}
+
+.tiptap-content .tiptap ul[data-type="taskList"] li div {
+	flex: 1;
+}
+
+/* Strikethrough */
+.tiptap-content .tiptap s {
+	text-decoration: line-through;
+	color: var(--text-sub);
+}
+
+/* ── Link Dialog ── */
+.tiptap-link-dialog-title {
+	font-size: var(--fs-h3);
+	font-weight: var(--fw-semibold);
+	margin: 0 0 var(--space-md);
+	color: var(--text-heading);
+}
+
+.tiptap-link-dialog-input {
+	width: 100%;
+	padding: var(--space-sm) var(--space-md);
+	font-size: var(--fs-body);
+	border: 1px solid var(--border-default);
+	border-radius: var(--radius-md);
+	background: var(--bg-page);
+	color: var(--text-body);
+	box-sizing: border-box;
+}
+
+.tiptap-link-dialog-input:focus {
+	outline: none;
+	border-color: var(--primary-main);
+}
+
+.tiptap-link-dialog-actions {
+	display: flex;
+	align-items: center;
+	gap: var(--space-sm);
+	margin-top: var(--space-lg);
+}
+
+.tiptap-link-dialog-spacer {
+	flex: 1;
+}

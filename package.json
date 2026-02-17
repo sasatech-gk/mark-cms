@@ -1,0 +1,49 @@
+{
+	"name": "mark-cms",
+	"private": true,
+	"version": "0.0.1",
+	"description": "A local-first Markdown CMS built with Tauri and React",
+	"license": "MIT",
+	"author": "SasaTech",
+	"keywords": [
+		"cms",
+		"markdown",
+		"tauri",
+		"desktop",
+		"content-management"
+	],
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"tauri": "tauri",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write",
+		"format": "biome format --write ."
+	},
+	"dependencies": {
+		"@tauri-apps/api": "^2",
+		"@tauri-apps/plugin-dialog": "^2",
+		"@tiptap/extension-link": "^2",
+		"@tiptap/extension-placeholder": "^2",
+		"@tiptap/extension-task-item": "^2",
+		"@tiptap/extension-task-list": "^2",
+		"@tiptap/extension-underline": "^2",
+		"@tiptap/react": "^2",
+		"@tiptap/starter-kit": "^2",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"react-router-dom": "^7",
+		"tiptap-markdown": "^0.8"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.0",
+		"@tauri-apps/cli": "^2",
+		"@types/react": "^19.1.8",
+		"@types/react-dom": "^19.1.6",
+		"@vitejs/plugin-react": "^4.6.0",
+		"typescript": "~5.8.3",
+		"vite": "^7.0.4"
+	}
+}

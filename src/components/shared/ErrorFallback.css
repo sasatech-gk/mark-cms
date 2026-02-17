@@ -1,0 +1,27 @@
+.error-fallback {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: var(--space-2xl);
+	height: 100%;
+	text-align: center;
+	gap: var(--space-md);
+}
+
+.error-fallback h2 {
+	color: var(--error-main);
+}
+
+.error-fallback-message {
+	color: var(--text-sub);
+	font-size: var(--fs-sm);
+	max-width: 480px;
+	word-break: break-word;
+}
+
+.error-fallback-actions {
+	display: flex;
+	gap: var(--space-sm);
+	margin-top: var(--space-md);
+}

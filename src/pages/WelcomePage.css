@@ -1,0 +1,128 @@
+.welcome {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: var(--space-2xl);
+	text-align: center;
+}
+
+.welcome h1 {
+	margin-bottom: var(--space-md);
+}
+
+.welcome-sub {
+	color: var(--text-sub);
+	font-size: var(--fs-sm);
+	margin-bottom: var(--space-xl);
+}
+
+.welcome-btn {
+	padding: var(--space-sm) var(--space-xl);
+	background-color: var(--primary-main);
+	color: #fff;
+	border: none;
+	border-radius: var(--radius-md);
+	font-size: var(--fs-sm);
+	font-weight: var(--fw-medium);
+	transition:
+		background-color var(--transition-fast),
+		transform var(--transition-fast);
+}
+
+.welcome-btn:hover {
+	background-color: var(--primary-tint1);
+	transform: translateY(-1px);
+}
+
+.welcome-error {
+	color: var(--error-text);
+	background-color: var(--error-bg);
+	padding: var(--space-sm) var(--space-md);
+	border-radius: var(--radius-sm);
+	font-size: var(--fs-sm);
+	margin-bottom: var(--space-md);
+	max-width: 480px;
+}
+
+.welcome-workspaces {
+	margin-top: var(--space-2xl);
+	width: 100%;
+	max-width: 520px;
+}
+
+.welcome-workspaces h3 {
+	margin-bottom: var(--space-md);
+	text-align: left;
+}
+
+.welcome-workspace-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xs);
+}
+
+.welcome-workspace-card {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: var(--space-sm) var(--space-md);
+	background-color: var(--bg-card);
+	border: 1px solid var(--border-subtle);
+	border-radius: var(--radius-md);
+	text-align: left;
+	transition:
+		border-color var(--transition-fast),
+		background-color var(--transition-fast);
+	cursor: pointer;
+}
+
+.welcome-workspace-card:hover {
+	border-color: var(--primary-tint2);
+	background-color: var(--primary-tint3);
+}
+
+.welcome-workspace-info {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	min-width: 0;
+	flex: 1;
+}
+
+.welcome-workspace-name {
+	font-size: var(--fs-sm);
+	font-weight: var(--fw-medium);
+	color: var(--text-heading);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.welcome-workspace-path {
+	font-size: var(--fs-xxs);
+	color: var(--text-sub);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.welcome-workspace-remove {
+	flex-shrink: 0;
+	color: var(--text-disabled);
+	font-size: var(--fs-h3);
+	line-height: 1;
+	padding: var(--space-xs);
+	border-radius: var(--radius-sm);
+	cursor: pointer;
+	transition:
+		color var(--transition-fast),
+		background-color var(--transition-fast);
+}
+
+.welcome-workspace-remove:hover {
+	color: var(--error-text);
+	background-color: var(--error-bg);
+}

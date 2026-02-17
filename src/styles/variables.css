@@ -1,0 +1,54 @@
+:root {
+	/* Primary -- mode-invariant */
+	--primary-main: #598d76;
+	--primary-tint1: #8bb3a1;
+	--primary-tint2: #b5d2c6;
+	--primary-tint3: #e0ede7;
+
+	/* Status -- mode-invariant */
+	--error-main: #c4504a;
+	--warning-main: #c48f3a;
+	--success-main: #4a8f5e;
+	--info-main: #4a7a9b;
+
+	/* Typography */
+	--font-family: "Noto Sans JP", sans-serif;
+	--fs-display: 2.25rem;
+	--fs-h1: 1.75rem;
+	--fs-h2: 1.375rem;
+	--fs-h3: 1.125rem;
+	--fs-body: 1rem;
+	--fs-sm: 0.875rem;
+	--fs-xs: 0.75rem;
+	--fs-xxs: 0.6875rem;
+
+	--fw-bold: 700;
+	--fw-semibold: 600;
+	--fw-medium: 500;
+	--fw-regular: 400;
+
+	--lh-display: 1.4;
+	--lh-heading: 1.5;
+	--lh-body: 1.8;
+	--lh-small: 1.7;
+
+	/* Spacing */
+	--space-xs: 4px;
+	--space-sm: 8px;
+	--space-md: 16px;
+	--space-lg: 24px;
+	--space-xl: 32px;
+	--space-2xl: 48px;
+
+	/* Border radius */
+	--radius-sm: 4px;
+	--radius-md: 8px;
+	--radius-lg: 12px;
+
+	/* Layout */
+	--sidebar-width: 260px;
+
+	/* Transitions */
+	--transition-fast: 150ms ease;
+	--transition-normal: 250ms ease;
+}

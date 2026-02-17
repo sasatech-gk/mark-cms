@@ -1,0 +1,108 @@
+.global-settings-page {
+	padding: var(--space-xl);
+	height: 100%;
+	overflow-y: auto;
+}
+
+.global-settings-page h1 {
+	margin-bottom: var(--space-xl);
+}
+
+.global-settings-section {
+	margin-bottom: var(--space-2xl);
+}
+
+.global-settings-section h2 {
+	font-size: var(--fs-h3);
+	margin-bottom: var(--space-md);
+}
+
+.global-settings-card {
+	background-color: var(--bg-card);
+	border: 1px solid var(--border-subtle);
+	border-radius: var(--radius-lg);
+	padding: var(--space-lg);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-lg);
+}
+
+.global-settings-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-lg);
+}
+
+.global-settings-label {
+	font-size: var(--fs-sm);
+	font-weight: var(--fw-medium);
+	color: var(--text-heading);
+}
+
+.global-settings-theme-toggle {
+	display: flex;
+	border: 1px solid var(--border-default);
+	border-radius: var(--radius-sm);
+	overflow: hidden;
+}
+
+.global-settings-theme-btn {
+	padding: var(--space-sm) var(--space-lg);
+	background: none;
+	border: none;
+	border-right: 1px solid var(--border-default);
+	color: var(--text-sub);
+	font-size: var(--fs-xs);
+	font-weight: var(--fw-medium);
+	transition:
+		background-color var(--transition-fast),
+		color var(--transition-fast);
+}
+
+.global-settings-theme-btn:last-child {
+	border-right: none;
+}
+
+.global-settings-theme-btn.active {
+	background-color: var(--primary-main);
+	color: #fff;
+}
+
+.global-settings-theme-btn:not(.active):hover {
+	background-color: var(--bg-section);
+	color: var(--text-heading);
+}
+
+.global-settings-lang-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	gap: var(--space-sm);
+}
+
+.global-settings-lang-btn {
+	padding: var(--space-sm) var(--space-md);
+	background: none;
+	border: 1px solid var(--border-default);
+	border-radius: var(--radius-sm);
+	color: var(--text-body);
+	font-size: var(--fs-sm);
+	font-weight: var(--fw-medium);
+	text-align: center;
+	transition:
+		background-color var(--transition-fast),
+		border-color var(--transition-fast),
+		color var(--transition-fast);
+}
+
+.global-settings-lang-btn.active {
+	background-color: var(--primary-tint3);
+	border-color: var(--primary-main);
+	color: var(--primary-main);
+	font-weight: var(--fw-semibold);
+}
+
+.global-settings-lang-btn:not(.active):hover {
+	background-color: var(--bg-section);
+	border-color: var(--primary-tint2);
+}
